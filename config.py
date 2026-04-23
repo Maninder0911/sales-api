@@ -1,9 +1,14 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
 # Database configuration
 DB_CONFIG = {
-    "host": "localhost",
-    "user": "root",
-    "password": "Maninder@0911",
-    "database": "sales_dashboard",
+    "host": os.getenv("DB_HOST"),
+    "user": os.getenv("DB_USER"),
+    "password": os.getenv("DB_PASSWORD"),
+    "database": os.getenv("DB_NAME")
 }
 
 # Log folder
